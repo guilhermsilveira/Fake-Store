@@ -1,0 +1,373 @@
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+
+.navbar-icon-top .navbar-nav .nav-link > .fa {
+  position: relative;
+  width: 36px;
+  font-size: 24px;
+}
+
+.logo{
+    width: 50px;
+    height: 50px;
+}
+
+.logo-carrinho{
+  height: 24px;
+}
+
+.navbar-icon-top .navbar-nav .nav-link > .fa > .badge {
+  font-size: 0.75rem;
+  position: absolute;
+  right: 0;
+  font-family: sans-serif;
+}
+
+.navbar-icon-top .navbar-nav .nav-link > .fa {
+  top: 3px;
+  line-height: 12px;
+}
+
+.navbar-icon-top .navbar-nav .nav-link > .fa > .badge {
+  top: -10px;
+}
+
+@media (min-width: 576px) {
+  .navbar-icon-top.navbar-expand-sm .navbar-nav .nav-link {
+    text-align: center;
+    display: table-cell;
+    height: 70px;
+    vertical-align: middle;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .navbar-icon-top.navbar-expand-sm .navbar-nav .nav-link > .fa {
+    display: block;
+    width: 48px;
+    margin: 2px auto 4px auto;
+    top: 0;
+    line-height: 24px;
+  }
+
+  .navbar-icon-top.navbar-expand-sm .navbar-nav .nav-link > .fa > .badge {
+    top: -7px;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar-icon-top.navbar-expand-md .navbar-nav .nav-link {
+    text-align: center;
+    display: table-cell;
+    height: 70px;
+    vertical-align: middle;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .navbar-icon-top.navbar-expand-md .navbar-nav .nav-link > .fa {
+    display: block;
+    width: 48px;
+    margin: 2px auto 4px auto;
+    top: 0;
+    line-height: 24px;
+  }
+
+  .navbar-icon-top.navbar-expand-md .navbar-nav .nav-link > .fa > .badge {
+    top: -7px;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-icon-top.navbar-expand-lg .navbar-nav .nav-link {
+    text-align: center;
+    display: table-cell;
+    height: 70px;
+    vertical-align: middle;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .navbar-icon-top.navbar-expand-lg .navbar-nav .nav-link > .fa {
+    display: block;
+    width: 48px;
+    margin: 2px auto 4px auto;
+    top: 0;
+    line-height: 24px;
+  }
+
+  .navbar-icon-top.navbar-expand-lg .navbar-nav .nav-link > .fa > .badge {
+    top: -7px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .navbar-icon-top.navbar-expand-xl .navbar-nav .nav-link {
+    text-align: center;
+    display: table-cell;
+    height: 70px;
+    vertical-align: middle;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .navbar-icon-top.navbar-expand-xl .navbar-nav .nav-link > .fa {
+    display: block;
+    width: 48px;
+    margin: 2px auto 4px auto;
+    top: 0;
+    line-height: 24px;
+  }
+
+  .navbar-icon-top.navbar-expand-xl .navbar-nav .nav-link > .fa > .badge {
+    top: -7px;
+  }
+}
+
+/* FIM DO HEADER*/
+
+
+/* SETTANDO  POSIÇÃO BOX E CARROSEL*/
+
+.produtos-carrossel{
+  display: flex;
+  justify-content: center;
+}
+
+
+/* BOX SIDE CARROSEL */
+
+.box{
+  border: 1px solid black;
+  width: 350px;
+  height: 450px;
+  background-color: rgb(204, 200, 200);
+  margin: 10px;
+  margin-left: 20px;
+  order: 1px solid black;
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: center;
+
+}
+.dropdown{
+  margin-left: 50%;
+  margin-right: 50%;
+}
+
+#dropdownMenuButton{
+  width: 200px;
+}
+
+.input-group{
+  margin: 3px;
+}
+
+.dropdown-button {
+  width: 120px; /* Defina o tamanho desejado para os botões de dropdown */
+}
+.precos {
+  display: flex;
+
+}
+
+.custom-input-group {
+
+  max-width: 200px;
+}
+
+@media (max-width: 768px) {
+  .box {
+    border: 1px solid black;
+    width: 90%;
+    height: 250px;
+    background-color: rgb(204, 200, 200);
+    margin: 10px;
+    margin-left: 30px;
+    order: 1px solid black;
+    display: flex;
+    justify-content: center;
+  }
+
+  .quick-find{
+    display: none;
+  }
+  .dropdown{
+    margin-top: 10px;
+  }
+
+}
+
+
+
+/* INICIO CARROSEL*/
+
+.carrossel{
+  width: 1000px;
+  height: 450px;
+  margin: 10px;
+  max-width: 1000px;
+}
+.img-slide{
+  margin-left: 350px;
+  height: 450px;
+
+}
+
+.produtos-carrossel {
+
+  display: flex;
+  flex-direction: row;
+}
+.visually-hidden{
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .produtos-carrossel {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .carrossel {
+    margin-left: 50px;
+    margin-bottom: 0;
+
+    width: 80%;
+    justify-content: center;
+  }
+  
+  .img-slide {
+    width: 200px;
+    height: 300px;
+    margin-left: 200px;
+    margin-right: 50%;
+  }
+  
+}
+
+
+
+.carousel-control-next, .carousel-control-prev {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15%;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+  background: 0 0;
+  border: 0;
+  opacity: .5;
+  transition: opacity .15s ease;
+}
+
+/*MODAL*/
+
+.modal-custom {
+  width: 600px;
+  max-width: 90%;
+  height: 500px;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.modal-body img {
+  width: 400px;
+  height: 400px;
+  height: auto;
+  object-fit: contain;
+}
+
+
+
+
+/* INICIO CARDS*/
+
+.compras{
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.cards {
+  padding: 20px;
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: 1px solid black;
+  width: 100%;
+  height: 1520px;
+}
+@media (max-width: 767px) {
+  #cards {
+    height: 3070px;
+    margin-top: 0px;
+  }
+}
+
+
+
+.card{
+    margin: 5px;
+    padding: 10px;
+    height: 600px;
+    width: 250px;
+    
+}
+.card-img-top{
+  width: 200px;
+  height: 200px;
+  max-width: 200px;
+}
+
+.mais-vistos{
+  justify-content: center;
+  border: 1px solid black;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  width: 300px;
+  height: 1620px;
+  margin-right: 20px;
+
+}
+
+.mais-vendidos{
+  margin-left: 75px;
+  font-size: medium;
+  font-weight: bold;
+}
+
+.text-center a{
+  text-decoration: none;
+}
+
+.button-wrapper{
+  margin-left: 45%;
+  margin-right: 45%;
+
+}
+#mais-vistos-items .card {
+  margin-top: 20px;
+  height: 500px; 
+}
+
+#mais-vistos-items .card img {
+  height: 250px; 
+  
+}

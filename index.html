@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
+
+  <title>Loja Virtual</title>
+</head>
+
+<body>
+
+  <!--CABEÇALHO-->
+
+  <header class="header">
+
+    <nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#"><img class="logo" src="ass/compras-online.png"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">
+                <i class="fa fa-home"></i>
+                Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">
+                <img class="logo-carrinho" src="ass/carrinho-de-compras.png">
+                Carrinho
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+          </ul>
+        </ul>
+        <form class="form-inline my-2 my-lg-0" onsubmit="redirectToPesquisa(event)">
+          <input id="searchInput" class="form-control mr-sm-2" type="text" placeholder="Pesquisar" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+        </form>
+      </div>
+    </nav>
+
+  </header>
+
+
+  <!--MAIN-->
+
+  <main>
+
+    <!--SESSÃO CARROSSEL-->
+    <section class="produtos-carrossel">
+      <div class="box">
+        <h1 class="quick-find">Quick Find</h1>
+
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Categorias:
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuCategorias">
+            <a class="dropdown-item" href="#">Accessories</a>
+            <a class="dropdown-item" href="#">Apparel</a>
+            <a class="dropdown-item" href="#">Footwear</a>
+            <a class="dropdown-item" href="#">Personal Care</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Gênero:
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Men</a>
+            <a class="dropdown-item" href="#">Women</a>
+            <a class="dropdown-item" href="#">Unisex</a>
+          </div>
+        </div>
+
+        <!--forms preço-->
+        <div class="preços">
+          <div class="input-group mb-3 custom-input-group">
+            <span class="input-group-text">$</span>
+            <span class="input-group-text">0.00</span>
+            <input id="min-price" type="text" class="form-control" aria-label="Minimum price">
+          </div>
+
+          <div class="input-group custom-input-group">
+            <input id="max-price" type="text" class="form-control" aria-label="Maximum price">
+            <span class="input-group-text">$</span>
+            <span class="input-group-text">0.00</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARROSSEL -->
+      <div class="carrossel">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="http://assets.myntassets.com/v1/images/style/properties/aeac2a97131d756f0c549dfc2fd1311c_images.jpg"
+                class="img-slide" alt="Produto 3606" >
+                
+            </div>
+            <div class="carousel-item">
+              <img
+                src="http://assets.myntassets.com/v1/images/style/properties/703a4bc156df5eb4719dc0dd2e871d82_images.jpg"
+                class="img-slide" alt="Produto 10098" >
+                
+            </div>
+            <div class="carousel-item">
+              <img
+                src="http://assets.myntassets.com/v1/images/style/properties/United-Colors-of-Benetton-Women-Funky-Brown-Sunglasses3be3eeb8d2e7fef362c1eef8b3776f80_images.jpg"
+                class="img-slide" alt="Produto 14907" >
+                
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden"><strong>Anterior</strong></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden"><strong>Próximo</strong></span>
+          </button>
+        </div>
+      </div>
+
+
+
+
+    </section>
+
+    <!--SESSÃO-COMPRAS-->
+    <section class="compras">
+
+      <!--CARDS-->
+      <section class="cards" id="cards">
+
+      </section>
+
+      <div class="botoes" id="paginationButtons">
+      </div>
+
+
+
+      <!-- MODAL -->
+      <div class="modal fade" id="modal" data-bs-keyboard="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-custom">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-3 font-bold" id="modalTitle"></h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body" id="modalBody"></div>
+            <div class="modal-footer flex justify-content-between"></div>
+          </div>
+        </div>
+      </div>
+
+
+      <!--SIDEBAR-->
+
+      <aside class="mais-vistos d-none d-lg-block" id="mais-vistos">
+        <h2 class="mais-vendidos">MAIS AVALIADOS ⭐:</h2>
+        <div id="mais-vistos-items">
+
+        </div>
+      </aside>
+
+    </section>
+
+  </main>
+
+  <!--FOOTER-->
+  <footer class="text-center text-lg-start text-white" style="background-color: #3e4551" id="footer">
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+      <!-- Section: Links -->
+      <section class="">
+        <!--Grid row-->
+        <div class="row">
+          <!--Grid column-->
+          <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">TRABALHO ACADEMICO:</h5>
+
+            <p>
+              Esse é um trabalho academico realizado na faculdade PUC Minas,
+              disciplina de Desenvolvimento de Interfaces Web (DIW).
+            </p>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">EMPRESA</h5>
+
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="#!" class="text-white">Sobre Nos</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Contatos</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Parcerias</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Reclamações</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">PAGAMENTO</h5>
+
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="#!" class="text-white">PayPal</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Visa</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">MasterCard</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">NET BAKINGS</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+
+
+          <!--Grid column-->
+          <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">REDES SOCIAIS</h5>
+
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="#!" class="text-white">Linkedln</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Facebook</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Instagram</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">GitHub</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </section>
+      <!-- Section: Links -->
+
+
+      </section>
+      <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+      © 2022 Copyright:
+      <a class="text-white" href="https://mdbootstrap.com/">DIW 2022</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
